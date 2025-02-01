@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context=".ui.RegisterFragment">
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/nomeRegisto"
+        android:layout_width="278dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="208dp"
+        android:hint="nome"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_corner"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/passwordRegisto"
+        android:layout_width="278dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:hint="password"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_corner"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailRegisto" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/emailRegisto"
+        android:layout_width="278dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_corner"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:hint="email"
+
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeRegisto" />
+
+    <Button
+        android:id="@+id/buttonRegisto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Sign Up"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/purple"
+        app:layout_constraintTop_toBottomOf="@+id/passwordRegisto"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ReturnToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toTopOf="@+id/nomeRegisto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.105" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

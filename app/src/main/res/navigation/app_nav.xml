@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav.xml"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.pdm_projeto.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_adminCarListFragment"
+            app:destination="@id/adminCarListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.pdm_projeto.ui.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/carListFragment"
+        android:name="com.example.pdm_projeto.ui.CarListFragment"
+        android:label="Car List"
+        tools:layout="@layout/fragment_car_list" >
+        <action
+            android:id="@+id/action_carListFragment_to_carDetailsFragment"
+            app:destination="@id/carDetailsFragment" />
+        <action
+            android:id="@+id/action_carListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carDetailsFragment"
+        android:name="com.example.pdm_projeto.ui.CarDetailsFragment"
+        tools:layout="@layout/fragment_car_details">
+        <argument
+            android:name="vehicleId"
+            app:argType="long" />
+        <argument
+            android:name="userId"
+            app:argType="long" />
+        <argument
+            android:name="vehicleName"
+            app:argType="string" />
+        <argument
+            android:name="vehicleDetails"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_carDetailsFragment_to_reservedFragment"
+            app:destination="@id/reservedFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reservedFragment"
+        android:name="com.example.pdm_projeto.ui.ReservedFragment"
+        android:label="ReservedFragment" >
+        <argument
+            android:name="vehicleId"
+            app:argType="long" />
+        <argument
+            android:name="userId"
+            app:argType="long" />
+        <argument
+            android:name="vehicleName"
+            app:argType="string" />
+        <argument
+            android:name="vehicleDetails"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_reservedFragment_to_addReviewFragment4"
+            app:destination="@id/addReviewFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.pdm_projeto.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_carListFragment"
+            app:destination="@id/carListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_reservedFragment"
+            app:destination="@id/reservedFragment" />
+        <argument
+            android:name="userId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_homeFragment_to_userReservationsFragment"
+            app:destination="@id/userReservationsFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_viewReviewsFragment"
+            app:destination="@id/viewReviewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminCarListFragment"
+        android:name="com.example.pdm_projeto.ui.AdminCarListFragment"
+        android:label="fragment_admin_car_list"
+        tools:layout="@layout/fragment_admin_car_list" >
+        <action
+            android:id="@+id/action_adminCarListFragment_to_addCarFragment"
+            app:destination="@id/addCarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCarFragment"
+        android:name="com.example.pdm_projeto.ui.AddCarFragment"
+        android:label="AddCarFragment" />
+    <fragment
+        android:id="@+id/userReservationsFragment"
+        android:name="com.example.pdm_projeto.ui.reservations.UserReservationsFragment"
+        android:label="UserReservationsFragment" >
+        <action
+            android:id="@+id/action_userReservationsFragment_to_addReviewFragment"
+            app:destination="@id/addReviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addReviewFragment"
+        android:name="com.example.pdm_projeto.ui.reviews.AddReviewFragment"
+        android:label="Adicionar Review">
+        <argument
+            android:name="reservationId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewReviewsFragment"
+        android:name="com.example.pdm_projeto.ui.reviews.ViewReviewsFragment"
+        android:label="fragment_view_reviews"
+        tools:layout="@layout/fragment_view_reviews" />
+
+
+</navigation>

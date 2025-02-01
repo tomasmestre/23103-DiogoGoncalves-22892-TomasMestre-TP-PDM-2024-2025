@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".ui.LoginFragment"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="282dp">
+
+    <EditText
+        android:id="@+id/LogInName"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="Username"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/LogInPassword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Log-In"
+        android:backgroundTint="@color/purple"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLabel" />
+
+    <Button
+        android:id="@+id/LoginRegisterButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple"
+        android:text="Registo"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+        tools:layout_editor_absoluteX="157dp" />
+
+</LinearLayout>
