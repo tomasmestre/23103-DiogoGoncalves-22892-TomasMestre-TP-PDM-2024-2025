@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@drawable/background"
     android:padding="8dp">
 
     <TextView
         android:id="@+id/tvCarDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="Detalhes do carro"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -17,6 +19,7 @@
         android:id="@+id/tvReservationPeriod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="Período de reserva"
         android:textSize="14sp"
         android:layout_marginTop="4dp" />
@@ -26,6 +29,7 @@
         android:id="@+id/btnReview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fazer Review"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/purple"
+        android:text="Fazer Review" />
 </LinearLayout>
